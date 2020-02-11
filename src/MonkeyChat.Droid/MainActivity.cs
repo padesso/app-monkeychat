@@ -3,7 +3,6 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using ImageCircle.Forms.Plugin.Droid;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 
@@ -21,7 +20,8 @@ namespace MonkeyChat.Droid
             base.OnCreate(bundle);
             Forms.Init(this, bundle);
             Xamarin.FormsMaps.Init(this, bundle);
-            ImageCircleRenderer.Init();
+            //TODO: do we need to use this differently in new version?
+            //ImageCircleRenderer.Init();
 
             DependencyService.Register<ITwilioMessenger, TwilioMessenger>();
 
